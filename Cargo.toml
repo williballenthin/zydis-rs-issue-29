@@ -1,0 +1,16 @@
+[package]
+name = "zydis-unsafe"
+version = "0.1.0"
+description = ""
+authors = ["William Ballenthin <william.ballenthin@mandiant.com>"]
+license = "Apache-2.0"
+edition = "2021"
+homepage = ""
+repository = ""
+
+[dependencies]
+zydis = "3"
+
+[profile.release]
+# this is important to trigger SIGSEGV
+lto = "fat"
